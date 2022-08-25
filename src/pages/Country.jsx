@@ -13,7 +13,7 @@ const Country = () => {
     //fetch data when user refresh page
     useEffect(() => {
         const getCountry = async () => {
-            const res = await fetch(`http://localhost/api/countries/${id}`)
+            const res = await fetch(`https://countries-restapi.herokuapp.com/api/countries/${id}`)
             if (res.ok) {
                 const country = await res.json();
                 setCountry(country)

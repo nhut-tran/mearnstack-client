@@ -8,7 +8,7 @@ const AddNewCountry = () => {
 
     const handleCreate = async (country) => {
 
-        const res = await fetch('http://localhost/api/countries', {
+        const res = await fetch('https://countries-restapi.herokuapp.com/api/countries', {
             method: "post",
             mode: 'cors',
             headers: {

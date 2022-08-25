@@ -12,7 +12,7 @@ const UpdateCountry = () => {
     //fetch data when user refresh page
     useEffect(() => {
         const getCountry = async () => {
-            const res = await fetch(`http://localhost/api/countries/${id}`)
+            const res = await fetch(`https://countries-restapi.herokuapp.com/api/countries/${id}`)
             if (res.ok) {
                 const country = await res.json();
                 setCountry(country)
@@ -23,7 +23,7 @@ const UpdateCountry = () => {
         }
     }, [id, ctr])
     const handleUpdate = async (id, data) => {
-        const res = await fetch(`http://localhost/api/countries/${id}`, {
+        const res = await fetch(`https://countries-restapi.herokuapp.com/api/countries/${id}`, {
             method: "put",
             mode: 'cors',
             headers: {

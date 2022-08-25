@@ -10,7 +10,7 @@ const Home = () => {
 
     useEffect(() => {
         const getCountries = async () => {
-            const res = await fetch('http://localhost/api/countries');
+            const res = await fetch('https://countries-restapi.herokuapp.com/api/countries');
             if (res.ok) {
                 const countries = await res.json();
                 dispatch({ type: "SET_COUNTRY", payload: countries })
@@ -21,7 +21,7 @@ const Home = () => {
 
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure delete this country?")) {
-            const res = await fetch(`http://localhost/api/countries/${id}`, {
+            const res = await fetch(`https://countries-restapi.herokuapp.com/api/countries/${id}`, {
                 method: "delete",
                 mode: 'cors'
             });
